@@ -23,6 +23,8 @@ func InitDB() {
 	}
 
 	dsn := os.Getenv("SUPABASE_DSN")
+	fmt.Println("DSN =", os.Getenv("SUPABASE_DSN"))
+
 	if dsn == "" {
 		log.Fatal("SUPABASE_DSN tidak ditemukan. Pastikan .env berisi DSN Supabase")
 	}
